@@ -1,0 +1,90 @@
+{
+  "name": "lock",
+  "version": "1.0.1",
+  "description": "AES file encryption/decryption comes in handy",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-webpack && electron-builder build --publish never"
+  },
+  "keywords": [],
+  "author": "Shepard",
+  "license": "ISC",
+  "devDependencies": {
+    "aes-js": "^3.1.2",
+    "electron": "^17.1.2",
+    "electron-builder": "^22.14.13",
+    "electron-webpack": "^2.8.2"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "source-map-support": "^0.5.21"
+  },
+  "electronWebpack": {
+    "commonSourceDirectory": "common",
+    "main": {
+      "sourceDirectory": "./"
+    },
+    "renderer": {
+      "sourceDirectory": "./ui/",
+      "webpackConfig": "./webpack.config.js"
+    }
+  },
+  "build": {
+    "productName": "Lock",
+    "appId": "shep.lock",
+    "asar": true,
+    "asarUnpack": "**\\*.{node,dll}",
+    "files": [
+      "dist",
+      "./preload.js",
+      "node_modules",
+      "package.json"
+    ],
+    "mac": {
+      "target": {
+        "target": "default",
+        "arch": [
+          "arm64",
+          "x64"
+        ]
+      },
+      "type": "distribution",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "app": "./",
+      "buildResources": "./assets",
+      "output": "release/build"
+    },
+    "extraResources": [
+      "./assets/**"
+    ]
+  }
+}

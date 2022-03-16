@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Lock</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <section id="heading">
+        <h1 id="status">Welcome</h1>
+        <svg id="lockBody" t="1647075997684" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="4258">
+            <path
+                d="M748.8 864 275.2 864c-32 0-57.6-25.6-57.6-57.6L217.6 512c0-32 32-57.6 57.6-57.6l467.2 0c38.4 0 57.6 25.6 57.6 57.6l0 294.4C806.4 838.4 780.8 864 748.8 864z"
+                p-id="4259"></path>
+        </svg>
+        <svg id="lockHead" class="lock-open" t="1647075997684" viewBox="0 0 1024 1024" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" p-id="4258">
+            <path
+                d="M364.8 422.4 364.8 339.2c0-70.4 51.2-121.6 121.6-121.6l51.2 0c64 0 121.6 51.2 121.6 121.6l0 83.2 57.6 0L716.8 339.2c0-102.4-83.2-179.2-179.2-179.2L486.4 160c-102.4 0-179.2 83.2-179.2 179.2l0 83.2L364.8 422.4z"
+                p-id="4260">
+            </path>
+        </svg>
+    </section>
+    <section id="password">
+        <label id="passwordLabel">Password</label>
+        <input id="passwordInput" aria-labelledby="passwordLabel" type="password" />
+        <div id="eyeWrapper">
+            <svg t="1647412372769" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="2213">
+                <path d="M508 512m-112 0a112 112 0 1 0 224 0 112 112 0 1 0-224 0Z" p-id="2214"></path>
+                <path
+                    d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3-7.7 16.2-7.7 35.2 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"
+                    p-id="2215"></path>
+            </svg>
+        </div>
+    </section>
+    <section id="files">
+        <div id="fileZone" draggable="true">
+            <span id='filePlaceholder'>
+                <svg t="1647079752199" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M854.6 288.7c6 6 9.4 14.1 9.4 22.6V928c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32h424.7c8.5 0 16.7 3.4 22.7 9.4l215.2 215.3zM790.2 326L602 137.8V326h188.2z"
+                        p-id="6010">
+                    </path>
+                </svg>
+            </span>
+
+            <div id="fileHint">Drag and drop files here</div>
+        </div>
+    </section>
+    <section id="options">
+        <span id="encrypt" class="mode-activated">Encrypt</span>
+        <div id="switch">
+            <div id="switchCircle"></div>
+        </div>
+        <span id="decrypt">Decrypt</span>
+    </section>
+</body>
+
+</html>
